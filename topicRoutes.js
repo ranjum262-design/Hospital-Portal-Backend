@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Topic = require('../models/Topic');
+const Topic = require('./Topic');
 
 // 1. GET all topics
 router.get('/', async (req, res) => {
@@ -65,5 +65,6 @@ router.put('/:id', async (req, res) => {
     res.status(400).json({ message: err.message });
   }
 });
+
 
 module.exports = router;
