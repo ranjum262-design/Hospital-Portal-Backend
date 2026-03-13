@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../models/User');
+const Topic = require('./Topic');
 
 // SIGNUP ROUTE
 router.post('/signup', async (req, res) => {
@@ -50,5 +50,6 @@ router.put('/update-status/:userId/:topicId', async (req, res) => {
         res.status(500).json({ error: err.message });
     }
 });
+
 
 module.exports = router;
