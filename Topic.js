@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Topic = require('./Topic');
 
 const TopicSchema = new mongoose.Schema({
   title: { type: String, required: true },
@@ -8,6 +9,7 @@ const TopicSchema = new mongoose.Schema({
   notes: [{ type: String }],                  
   isCompleted: { type: Boolean, default: false }
 });
+
 
 
 
